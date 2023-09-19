@@ -17,7 +17,6 @@ data = {
             "Year": "2021",
             "Roll no:": "21/189",
             "Total Attendance": "6",
-            "year" : "3",
             "last_attendace_time" : "19/09/2023 12:00:00"
             },
 
@@ -28,7 +27,6 @@ data = {
             "Year": "2021",
             "Roll no:": "21/188",
             "Total Attendance": "8",
-            "year" : "3",
             "last_attendace_time" : "19/09/2023 12:00:00"
             },
 
@@ -39,7 +37,6 @@ data = {
             "Year": "2021",
             "Roll no:": "21/190",
             "Total Attendance": "2",
-            "year" : "3",
             "last_attendace_time" : "19/09/2023 12:00:00"
             },
             "12345":
@@ -49,7 +46,6 @@ data = {
             "Year": "2021",
             "Roll no:": "21/192",
             "Total Attendance": "1",
-            "year" : "3",
             "last_attendace_time" : "19/09/2023 12:00:00"
             }
             

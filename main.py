@@ -38,6 +38,9 @@ encodeListKnown, studentIds = encodeListKnownWithIds
 # print(studentIds)
 print("Encoding File Loaded")
 
+modeType = 0
+counter = 0
+id = -1
 
 while True:
     success, img = cap.read()
@@ -49,7 +52,7 @@ while True:
     encodeCurFrame = face_recognition.face_encodings(imgS, faceCurFrame)
 
     imgBackground[162:162+480, 55:55+640] = img
-    imgBackground[44:44+633, 808:808+414] = imgModeList[0]
+    imgBackground[44:44+633, 808:808+414] = imgModeList[modeType]
 
     for encodeFace, faceLoc in zip(encodeCurFrame, faceCurFrame):
         matches = face_recognition.compare_faces(encodeListKnown, encodeFace)
@@ -67,6 +70,30 @@ while True:
             y1, x2, y2, x1 = y1*4, x2*4, y2*4, x1*4
             bbox = 55+x1, 162+y1, x2-x1, y2-y1
             imgBackground = cvzone.cornerRect(imgBackground, bbox, rt=0)
+            id = studentIds[matchIndex]
+            if counter == 0:
+                counter = 1
+                modeType = 1
+
+
+    if counter!=0:
+
+        if counter ==1:
+            studentInfo = db.reference(f'Students/{id}').get()
+            print(studentInfo)
+        
+        cv2.putText(imgBackground, str(studentInfo['Total Attendance']), (861,125),
+                    fontFace=cv2.FONT_HERSHEY_PLAIN, fontScale=2, color=(0,0,255), thickness=2)
+        cv2.putText(imgBackground, str(studentInfo['Name']), (808,445),
+                    fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=2, color=(255,255,255), thickness=1)
+        cv2.putText(imgBackground, str(studentInfo['Major']), (1006,550),
+                    fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=(100,100,100), thickness=1)
+        cv2.putText(imgBackground, str(id), (1006,493),
+                    fontFace=cv2.FONT_HERSHEY_PLAIN, fontScale=2, color=(100,100,100), thickness=1)
+        cv2.putText(imgBackground, str(studentInfo['Year']), (1125,625),
+                    fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=2, color=(100,100,100), thickness=1)
+
+        counter += 1
 
 
     # cv2.imshow("Webcam", img)
