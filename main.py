@@ -3,6 +3,16 @@ import face_recognition
 import numpy as np
 import pickle
 import cvzone
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import storage
+
+cred = credentials.Certificate("/Users/anishsoni/Desktop/Github Clone Project/Face-Detection-Attendance-System/serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL':'https://realtimeattendancesystem-40b3a-default-rtdb.asia-southeast1.firebasedatabase.app/',
+    'storageBucket':'realtimeattendancesystem-40b3a.appspot.com'
+})
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
