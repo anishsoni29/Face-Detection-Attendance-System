@@ -16,8 +16,10 @@ data = {
             "Major": "Computer Science",
             "Year": "2021",
             "Roll no:": "21/189",
+            # "No_of_years": "3",
+            # "Standing": "G",
             "Total Attendance": "6",
-            "last_attendace_time" : "19/09/2023 12:00:00"
+            "last_attendace_time": "19/09/2023 12:00:00"
             },
 
         "richard":
@@ -25,9 +27,11 @@ data = {
             "Name": " Richard Branson",
             "Major": "Aviation",
             "Year": "2021",
+            # "No_of_years": "3",
+            # "Standing": "G",
             "Roll no:": "21/188",
             "Total Attendance": "8",
-            "last_attendace_time" : "19/09/2023 12:00:00"
+            "last_attendace_time": "19/09/2023 12:00:00"
             },
 
             "steve":
@@ -35,9 +39,11 @@ data = {
             "Name": "Steve Jobs",
             "Major": "Electronics & IT",
             "Year": "2021",
+            # "No_of_years": "3",
+            # "Standing": "G",
             "Roll no:": "21/190",
             "Total Attendance": "2",
-            "last_attendace_time" : "19/09/2023 12:00:00"
+            "last_attendace_time": "19/09/2023 12:00:00"
             },
             "12345":
         {
@@ -45,8 +51,10 @@ data = {
             "Major": "Rocket Science",
             "Year": "2021",
             "Roll no:": "21/192",
+            # "No_of_years": "3",
+            # "Standing": "G",
             "Total Attendance": "1",
-            "last_attendace_time" : "19/09/2023 12:00:00"
+            "last_attendace_time": "19/09/2023 12:00:00"
             }
             
         }
