@@ -8,6 +8,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
 
+#Initialize the firebase app
 cred = credentials.Certificate("/Users/anishsoni/Desktop/Github Clone Project/Face-Detection-Attendance-System/serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL':'https://realtimeattendancesystem-40b3a-default-rtdb.asia-southeast1.firebasedatabase.app/',
