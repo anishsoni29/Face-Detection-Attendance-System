@@ -107,3 +107,6 @@ while True:
     # cv2.imshow("Webcam", img)
     cv2.imshow("Face Recognition", imgBackground)
     cv2.waitKey(1)
+
+
+    #image resizing not working - FIX THIS
