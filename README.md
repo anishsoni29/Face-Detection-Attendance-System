@@ -1,7 +1,4 @@
 # Face-Detection-Attendance-System
-
-Certainly! When describing your face-detection attendance system during an interview, you can structure your response as follows:
-
 ---
 
 I've developed a face-detection attendance system using Python, focusing on real-time recognition and seamless integration with Firebase for efficient data storage. The system operates by recognizing faces in a given area at any point during classes and instantly updating the attendance records. Here's a breakdown of the key components and functionalities:
